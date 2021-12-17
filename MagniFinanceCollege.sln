@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagniFinanceCollege", "MagniFinanceCollege\MagniFinanceCollege.csproj", "{DF2843C8-B74A-4BED-932D-CA01B48F62B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF2843C8-B74A-4BED-932D-CA01B48F62B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2843C8-B74A-4BED-932D-CA01B48F62B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2843C8-B74A-4BED-932D-CA01B48F62B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2843C8-B74A-4BED-932D-CA01B48F62B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCC15CFE-F13A-4955-9223-1B9CECBA38E9}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
+		description = Project by MagniFinance
+	EndGlobalSection
+EndGlobal
