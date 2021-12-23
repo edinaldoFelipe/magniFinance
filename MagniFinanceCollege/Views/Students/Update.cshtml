@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Update Student";
+    ViewData["menuActive5"] = "active";
+    ViewData["moduleJSPage"] = "CoursesController.js";
+}
+@{
+    var courseName = ViewBag.Name;
+}
+<div class="pcoded-inner-content" id="CoursesController" ng-controller="CoursesCreate">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- [ Main Content ] start -->
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-10">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Students</h5>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a asp-controller="Home" asp-action="Index"><i class="feather icon-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a asp-controller="Students" asp-action="Index">Students</a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a>Update</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 text-right">
+                                <button id="btnSaveCourse" type="button" class="btn btn-outline-info" data-toggle="tooltip">
+                                    <i class="feather icon-save"></i>Update
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+                <!-- [ Form ] start -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Update Student</h5>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="nameCourse">Student Name</label>
+                                                    <input id="nameCourse" type="text" value="@courseName"
+                                                           class="form-control" placeholder="Name">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ Form ] start -->
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+</div>
