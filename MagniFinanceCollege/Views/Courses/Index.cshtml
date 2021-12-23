@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Courses";
+    ViewData["menuActive2"] = "active";
+    ViewData["moduleJSPage"] = "CoursesController.js";
+}
+
+<div class="pcoded-inner-content" id="CoursesController" ng-controller="CoursesController">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- [ Main Content ] start -->
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-10">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Courses</h5>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a asp-controller="Home" asp-action="Index"><i class="feather icon-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a>Courses</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 text-right">
+                                <button onclick="location.href='@Url.Action("Create", "Courses")'"
+                                        type="button" class="btn btn-outline-primary" data-toggle="tooltip">
+                                    <i class="feather icon-plus-circle"></i>New
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <!-- [ Hover-table ] start -->
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Registered Courses</h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr class="table-active">
+                                                    <th>Code</th>
+                                                    <th>Name</th>
+                                                    <th>Subjects</th>
+                                                    <th>Teachers</th>
+                                                    <th>Students</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody ng-bind-html="table">
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- [ Hover-table ] end -->
+                            <!-- [ Model Modal ] start -->
+                            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-danger font-weight-bold" id="myModalLabel"></h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div id="myModalBody" class="p-10 h6 text-center">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button id="confirmModel" data-dismiss="modal" type="button" class="btn btn-danger"><i class="mr-0 feather icon-trash-2"></i> Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Model Modal ] start -->
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+</div>
