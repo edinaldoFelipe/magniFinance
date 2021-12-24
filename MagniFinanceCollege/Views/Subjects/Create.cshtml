@@ -1,10 +1,13 @@
 ﻿@{
     ViewData["Title"] = "New Subjects";
     ViewData["menuActive3"] = "active";
-    ViewData["moduleJSPage"] = "CoursesController.js";
+    ViewData["moduleJSPage"] = "SubjectsController.js";
 }
-
-<div class="pcoded-inner-content" id="CoursesController" ng-controller="CoursesCreate">
+@{
+    var Courses = ViewBag.Courses;
+    var Teachers = ViewBag.Teachers;
+}
+<div class="pcoded-inner-content" id="SubjectsController" ng-controller="SubjectsCreate">
     <div class="main-body">
         <div class="page-wrapper">
             <!-- [ Main Content ] start -->
@@ -30,7 +33,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-2 text-right">
-                                <button id="btnSaveCourse" type="button" class="btn btn-outline-success" data-toggle="tooltip">
+                                <button id="btnSaveSubject" type="button" class="btn btn-outline-success" data-toggle="tooltip">
                                     <i class="feather icon-save"></i>Save
                                 </button>
                             </div>
@@ -49,13 +52,41 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form>
                                                 <div class="form-group">
-                                                    <label for="nameCourse">Subject Name</label>
-                                                    <input id="nameCourse" type="text"
+                                                    <label for="nameSubject">Subject Name</label>
+                                                    <input id="nameSubject" type="text"
                                                            class="form-control" placeholder="Name">
                                                 </div>
-                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Course Name</label>
+                                                <select class="form-control" id="selectCourse">
+                                                    <option disabled hidden selected>Select a course</option>
+                                                    @foreach (var item in @Courses)
+                                                    {
+                                                        <option value="@item[0]">
+                                                            @item[1]
+                                                        </option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Teacher Name</label>
+                                                <select class="form-control" id="selectTeacher">
+                                                    <option disabled hidden selected>Select a teacher</option>
+                                                    @foreach (var item in @Teachers)
+                                                    {
+                                                        <option value="@item[0]">
+                                                            @item[1]
+                                                        </option>
+                                                    }
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

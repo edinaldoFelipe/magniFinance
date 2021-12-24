@@ -33,6 +33,10 @@ namespace MagniFinanceCollege.Controllers
         {
             // var data = db.Students.Find(id);
             string data = null;
+            ViewBag.StudentName = "Justice Laura";
+            ViewBag.StudentBirthday = "2002-10-23";
+            ViewBag.RegisterNumber = "2020213493";
+
             return View(data);
         }
 

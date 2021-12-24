@@ -37,6 +37,6 @@ $('#myModal').on('show.bs.modal', function (event) {
         $modal = $(event.currentTarget);
 
     $modal.find('#myModalLabel').html("<i class='feather icon-alert-triangle'></i> Are you Sure?");
-    $modal.find('#myModalBody').html("Do you really want to delete this course?");
+    $modal.find('#myModalBody').html("Do you really want to delete this record?");
     $modal.find('#confirmModel')[0].dataset.id = id;
 })

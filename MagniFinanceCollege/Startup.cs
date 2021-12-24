@@ -57,9 +57,9 @@ namespace MagniFinanceCollege
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapHub<Dashboard>("/dashboardHub");
                 endpoints.MapHub<Courses>("/coursesHub");
-                endpoints.MapHub<Courses>("/subjectsHub");
-                endpoints.MapHub<Courses>("/teachersHub");
-                endpoints.MapHub<Courses>("/studentsHub");
+                endpoints.MapHub<Subjects>("/subjectsHub");
+                endpoints.MapHub<Teachers>("/teachersHub");
+                endpoints.MapHub<Students>("/studentsHub");
             });
         }
     }

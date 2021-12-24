@@ -33,6 +33,11 @@ namespace MagniFinanceCollege.Controllers
         {
             // var data = db.Teachers.Find(id);
             string data = null;
+
+            ViewBag.TeacherName = "Mr. Arturo Anand";
+            ViewBag.TeacherBirthday = "2002-10-23";
+            ViewBag.Salary = "123.24";
+
             return View(data);
         }
 
@@ -40,5 +45,6 @@ namespace MagniFinanceCollege.Controllers
         {
             return View();
         }
+
     }
 }

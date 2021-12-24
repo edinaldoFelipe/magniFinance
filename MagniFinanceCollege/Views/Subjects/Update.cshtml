@@ -1,12 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Update Subject";
     ViewData["menuActive3"] = "active";
-    ViewData["moduleJSPage"] = "CoursesController.js";
+    ViewData["moduleJSPage"] = "SubjectsController.js";
 }
 @{
-    var courseName = ViewBag.Name;
+    var Courses = ViewBag.Courses;
+    var Teachers = ViewBag.Teachers;
+    var CourseId = ViewBag.CourseId;
+    var TeachearId = ViewBag.TeachearId;
+    var SubjectName = ViewBag.SubjectName;
 }
-<div class="pcoded-inner-content" id="CoursesController" ng-controller="CoursesCreate">
+<div class="pcoded-inner-content" id="SubjectsController" ng-controller="SubjectsCreate">
     <div class="main-body">
         <div class="page-wrapper">
             <!-- [ Main Content ] start -->
@@ -32,7 +36,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-2 text-right">
-                                <button id="btnSaveCourse" type="button" class="btn btn-outline-info" data-toggle="tooltip">
+                                <button id="btnSaveSubject" type="button" class="btn btn-outline-info" data-toggle="tooltip">
                                     <i class="feather icon-save"></i>Update
                                 </button>
                             </div>
@@ -40,33 +44,70 @@
                     </div>
                 </div>
                 <!-- [ breadcrumb ] end -->
-                <!-- [ Form ] start -->
                 <div class="main-body">
                     <div class="page-wrapper">
+                        <!-- [ Form ] start -->
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h5>Update Subject</h5>
                                 </div>
-
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="nameCourse">Subject Name</label>
-                                                    <input id="nameCourse" type="text" value="@courseName"
-                                                           class="form-control" placeholder="Name">
-                                                </div>
-                                            </form>
+                                            <div class="form-group">
+                                                <label for="nameSubject">Subject Name</label>
+                                                <input id="nameSubject" type="text" value="@SubjectName"
+                                                       class="form-control" placeholder="Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Course Name</label>
+                                                <select class="form-control" id="selectCourse">
+                                                    <option disabled hidden selected>Select a course</option>
+                                                    @foreach (var item in @Courses)
+                                                    {
+                                                        @if (CourseId == item[0])
+                                                        {
+                                                            <option value="@item[0]" selected>@item[1]</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@item[0]">@item[1]</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Teacher Name</label>
+                                                <select class="form-control" id="selectTeacher">
+                                                    <option disabled hidden selected>Select a teacher</option>
+                                                    @foreach (var item in @Teachers)
+                                                    {
+                                                        @if (TeachearId == item[0])
+                                                        {
+                                                            <option value="@item[0]" selected>@item[1]</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@item[0]">@item[1]</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- [ Form ] end -->
                     </div>
                 </div>
-                <!-- [ Form ] start -->
             </div>
             <!-- [ Main Content ] end -->
         </div>

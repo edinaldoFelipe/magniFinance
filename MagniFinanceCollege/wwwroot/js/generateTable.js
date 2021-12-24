@@ -28,7 +28,7 @@ const generateRow = row => {
 }
 
 const getHTMLBtnEdit = id => {
-    return `<button onclick="location.href='/Courses/Update/${id}'"
+    return `<button onclick="location.href='${location.href}/Update/${id}'"
             class="btn btn-outline-primary p-1 px-2 mr-0">
             <i class="far fa-edit m-0"></i>
         </button>`;

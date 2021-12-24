@@ -1,12 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Update Student";
     ViewData["menuActive5"] = "active";
-    ViewData["moduleJSPage"] = "CoursesController.js";
+    ViewData["moduleJSPage"] = "StudentsController.js";
 }
 @{
-    var courseName = ViewBag.Name;
+    var StudentName = ViewBag.StudentName;
+    var StudentBirthday = ViewBag.StudentBirthday;
+    var RegisterNumber = ViewBag.RegisterNumber;
 }
-<div class="pcoded-inner-content" id="CoursesController" ng-controller="CoursesCreate">
+<div class="pcoded-inner-content" id="StudentsController" ng-controller="StudentsCreate">
     <div class="main-body">
         <div class="page-wrapper">
             <!-- [ Main Content ] start -->
@@ -32,7 +34,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-2 text-right">
-                                <button id="btnSaveCourse" type="button" class="btn btn-outline-info" data-toggle="tooltip">
+                                <button id="btnSaveStudent" type="button" class="btn btn-outline-info" data-toggle="tooltip">
                                     <i class="feather icon-save"></i>Update
                                 </button>
                             </div>
@@ -48,15 +50,34 @@
                                 <div class="card-header">
                                     <h5>Update Student</h5>
                                 </div>
-
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="nameCourse">Student Name</label>
-                                                    <input id="nameCourse" type="text" value="@courseName"
+                                                    <label>Student Name</label>
+                                                    <input id="nameStudent" type="text" value="@StudentName"
                                                            class="form-control" placeholder="Name">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Date Birthday</label>
+                                                    <input id="birthStudent" type="date" value="@StudentBirthday"
+                                                           class="form-control" placeholder="Birthday">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Register Number</label>
+                                                    <input id="registerNumber" type="number" value="@RegisterNumber"
+                                                           class="form-control" placeholder="Register">
                                                 </div>
                                             </form>
                                         </div>

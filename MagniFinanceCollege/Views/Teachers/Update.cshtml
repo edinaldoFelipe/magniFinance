@@ -1,12 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Update Teacher";
     ViewData["menuActive4"] = "active";
-    ViewData["moduleJSPage"] = "CoursesController.js";
+    ViewData["moduleJSPage"] = "TeachersController.js";
 }
 @{
-    var courseName = ViewBag.Name;
+    var TeacherName = ViewBag.TeacherName;
+    var TeacherBirthday = ViewBag.TeacherBirthday;
+    var Salary = ViewBag.Salary;
 }
-<div class="pcoded-inner-content" id="CoursesController" ng-controller="CoursesCreate">
+<div class="pcoded-inner-content" id="TeachersController" ng-controller="TeachersCreate">
     <div class="main-body">
         <div class="page-wrapper">
             <!-- [ Main Content ] start -->
@@ -32,7 +34,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-2 text-right">
-                                <button id="btnSaveCourse" type="button" class="btn btn-outline-info" data-toggle="tooltip">
+                                <button id="btnSaveTeacher" type="button" class="btn btn-outline-info" data-toggle="tooltip">
                                     <i class="feather icon-save"></i>Update
                                 </button>
                             </div>
@@ -48,15 +50,34 @@
                                 <div class="card-header">
                                     <h5>Update Teacher</h5>
                                 </div>
-
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="nameCourse">Teacher Name</label>
-                                                    <input id="nameCourse" type="text" value="@courseName"
+                                                    <label>Teacher Name</label>
+                                                    <input id="nameTeacher" type="text" value="@TeacherName"
                                                            class="form-control" placeholder="Name">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Date Birthday</label>
+                                                    <input id="birthTeacher" type="date" value="@TeacherBirthday"
+                                                           class="form-control" placeholder="Birthday">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Salary</label>
+                                                    <input id="salaryTeacher" type="number" value="@Salary"
+                                                           class="form-control" placeholder="Salary">
                                                 </div>
                                             </form>
                                         </div>

@@ -15,18 +15,20 @@ namespace MagniFinanceCollege.Hubs
     {
         // private CollegeContext context;
 
-        // Static Data to test
+        /**
+         * Static Data to test
+         */
         private object[] staticData()
         {
             return new[]
             {
-                new {ID=1050,Name="Chemistry",Subjects=5,Teachers=5,Students=245},
-                new {ID=4022,Name="Microeconomics",Subjects=6,Teachers=4,Students=350},
-                new {ID=4041,Name="Macroeconomics",Subjects=4,Teachers=4,Students=278},
-                new {ID=1045,Name="Calculus",Subjects=5,Teachers=5,Students=412},
-                new {ID=3141,Name="Trigonometry",Subjects=2,Teachers=2,Students=384},
-                new {ID=2021,Name="Composition",Subjects=1,Teachers=0,Students=284},
-                new {ID=2042,Name="Literature",Subjects=8,Teachers=8,Students=934}
+                new {CourseID=1,CourseName="Chemistry",Subjects=5,Teachers=5,Students=245},
+                new {CourseID=2,CourseName="Microeconomics",Subjects=6,Teachers=4,Students=350},
+                new {CourseID=3,CourseName="Macroeconomics",Subjects=4,Teachers=4,Students=278},
+                new {CourseID=4,CourseName="Calculus",Subjects=5,Teachers=5,Students=412},
+                new {CourseID=5,CourseName="Trigonometry",Subjects=2,Teachers=2,Students=384},
+                new {CourseID=6,CourseName="Composition",Subjects=1,Teachers=0,Students=284},
+                new {CourseID=7,CourseName="Literature",Subjects=8,Teachers=8,Students=934}
             };
         }
 

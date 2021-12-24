@@ -44,7 +44,7 @@ namespace MagniFinanceCollege.Data
             {
             new Teacher{TeacherID=1,TeacherName="Dr. Carson Alexander",TeacherBirthday=DateTime.Parse("2005-09-01"),Salary=120.23},
             new Teacher{TeacherID=2,TeacherName="Dr. Meredith Alonso",TeacherBirthday=DateTime.Parse("2002-11-18"),Salary=125.23},
-            new Teacher{TeacherID=3,TeacherName="Mr. Arturo Anand",TeacherBirthday=DateTime.Parse("2003-02-8"),Salary=119.02},
+            new Teacher{TeacherID=3,TeacherName="Mr. Arturo Anand",TeacherBirthday=DateTime.Parse("2003-02-08"),Salary=119.02},
             new Teacher{TeacherID=4,TeacherName="Dr. Gytis Barzdukas",TeacherBirthday=DateTime.Parse("2002-09-10"),Salary=127.23},
             new Teacher{TeacherID=5,TeacherName="Dr. Yan Li",TeacherBirthday=DateTime.Parse("2002-07-21"),Salary=100.2},
             new Teacher{TeacherID=6,TeacherName="Sir. Peggy Justice",TeacherBirthday=DateTime.Parse("2001-03-27"),Salary=99.6},

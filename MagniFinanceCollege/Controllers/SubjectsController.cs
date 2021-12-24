@@ -7,6 +7,7 @@
  * 
  */
 
+using System.Linq;
 using MagniFinanceCollege.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,13 +33,53 @@ namespace MagniFinanceCollege.Controllers
         public IActionResult Update(int id)
         {
             // var data = db.Subjects.Find(id);
-            string data = null;
-            return View(data);
+            ViewBag.CourseId = "1";
+            ViewBag.TeachearId = "3";
+            ViewBag.SubjectName = "Geography";
+            setViewBagStatic();
+
+            return View();
         }
 
         public IActionResult Create()
         {
-            return View();
+            string data = null;
+            //var data = new
+            //{
+            //    Teachers = db.Teachers.ToList(),
+            //    Courses = db.Courses.ToList(),
+            //};
+
+            setViewBagStatic();
+
+            return View(data);
+        }
+
+        /**
+         * Static Data to test
+         */
+        private void setViewBagStatic()
+        {
+            ViewBag.Teachers = new[]
+            {
+                new[] {"1","Dr. Carson Alexander"},
+                new[] {"2","Mr. Arturo Anand"},
+                new[] {"3","Dr. Gytis Barzdukas"},
+                new[] {"4","Dr. Yan Li"},
+                new[] {"5","Sir. Peggy Justice"},
+                new[] {"6","Ms. Laura Norman"},
+                new[] {"7","Dr. Meredith Alonso"}
+            };
+            ViewBag.Courses = new[]
+            {
+                new[]{ "1", "Chemistry" },
+                new[]{ "2", "Microeconomics"},
+                new[]{ "3", "Macroeconomics"},
+                new[]{ "4", "Calculus"},
+                new[]{ "5", "Trigonometry"},
+                new[]{ "6", "Composition" },
+                new[]{ "7", "Literature"}
+            };
         }
     }
 }
