@@ -29,9 +29,11 @@
     <Folder Include="Views\Teachers\" />
     <Folder Include="Views\Students\" />
     <Folder Include="Views\Subjects\" />
+    <Folder Include="wwwroot\theme\assets\images\screenshots\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Scripts\" />
+    <Content Remove="wwwroot\theme\assets\images\screenshots\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
