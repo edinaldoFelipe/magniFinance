@@ -25,7 +25,7 @@ namespace MagniFinanceCollege
             services.AddDbContext<CollegeContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDatabaseDeveloperPageExceptionFilter();
+            //services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddControllersWithViews();
 
